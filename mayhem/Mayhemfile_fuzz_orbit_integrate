@@ -1,0 +1,9 @@
+project: savantenvs/rebound
+target: fuzz_orbit_integrate
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_orbit_integrate/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_orbit_integrate
+    libfuzzer: true
+    timeout: 5

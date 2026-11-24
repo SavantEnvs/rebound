@@ -1,0 +1,9 @@
+project: savantenvs/rebound
+target: fuzz_archive_step
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_archive_step/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_archive_step
+    libfuzzer: true
+    timeout: 5
